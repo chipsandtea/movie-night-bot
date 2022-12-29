@@ -1,4 +1,4 @@
-import { TvShow } from './tv-show';
+import { TvShow } from './tv-show.js';
 import { Person } from './person';
 import { Genre } from './genre';
 import { Network } from './network';

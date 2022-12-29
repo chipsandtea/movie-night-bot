@@ -32,6 +32,7 @@ import {
     Logger,
 } from './services/index.js';
 import { Trigger } from './triggers/index.js';
+import 'reflect-metadata';
 
 const require = createRequire(import.meta.url);
 let Config = require('../config/config.json');
