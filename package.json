@@ -37,7 +37,7 @@
     "nodemonConfig": {
         "verbose": true,
         "watch": [
-            "src/*"
+            "./*"
         ],
         "ext": "js, ts, mjs, json",
         "ignore": [

@@ -19,6 +19,7 @@
                 "title": "{{COM:bot.name}} - Commands",
                 "description": [
                     "{{CMD_LINK_TEST}} - {{REF:commandDescs.test}}",
+                    "{{CMD_LINK_TEST}} - {{REF:commandDescs.add}}",
                     "{{CMD_LINK_INFO}} - {{REF:commandDescs.info}}"
                 ],
                 "fields": [
@@ -52,6 +53,9 @@
                         "value": ["{{REF:links.docsEmbed}}", "{{REF:links.supportEmbed}}"]
                     }
                 ]
+            },
+            "add": {
+                "description": "Add command"
             },
             "test": {
                 "description": "Test command works!"
@@ -190,6 +194,7 @@
             "description": "{{REF:links.templateEmbed}} helps give developers a starting point for new Discord bots, so that much of the initial setup can be avoided and developers can instead focus on meaningful bot features."
         },
         "chatCommands": {
+            "add": "add",
             "help": "help",
             "info": "info",
             "test": "test"
@@ -204,6 +209,7 @@
             "option": "option"
         },
         "commandDescs": {
+            "add": "Add a movie to the end of the list.",
             "help": "Get help with commands, permissions, FAQ, etc.",
             "info": "View bot info.",
             "test": "Run the test command."

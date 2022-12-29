@@ -7,7 +7,7 @@
                 "fields": [
                     {
                         "name": "Important {{REF:fields.commands}}",
-                        "value": ["**/{{REF:chatCommands.help}}** - {{REF:commandDescs.help}}"]
+                        "value": ["{{CMD_LINK_HELP}} - {{REF:commandDescs.help}}"]
                     },
                     {
                         "name": "{{REF:fields.links}}",
@@ -18,8 +18,9 @@
             "commands": {
                 "title": "{{COM:bot.name}} - Commands",
                 "description": [
-                    "**/{{REF:chatCommands.test}}** - {{REF:commandDescs.test}}",
-                    "**/{{REF:chatCommands.info}}** - {{REF:commandDescs.info}}"
+                    "{{CMD_LINK_TEST}} - {{REF:commandDescs.test}}",
+                    "{{CMD_LINK_TEST}} - {{REF:commandDescs.add}}",
+                    "{{CMD_LINK_INFO}} - {{REF:commandDescs.info}}"
                 ],
                 "fields": [
                     {
@@ -44,7 +45,7 @@
                     "Frequently Asked Questions about {{COM:bot.name}}.",
                     "",
                     "**How do I restrict who can run the commands?**",
-                    "Slash command permissions can be configured in the Server Settings. See \"/{{REF:chatCommands.help}} {{REF:arguments.option}}:{{REF:helpOptions.permissions}}\" for more information."
+                    "Slash command permissions can be configured in the Server Settings. See {{CMD_LINK_HELP}} `{{REF:arguments.option}}:{{REF:helpOptions.permissions}}` for more information."
                 ],
                 "fields": [
                     {
@@ -52,6 +53,9 @@
                         "value": ["{{REF:links.docsEmbed}}", "{{REF:links.supportEmbed}}"]
                     }
                 ]
+            },
+            "add": {
+                "description": "Add command"
             },
             "test": {
                 "description": "Test command works!"
@@ -190,6 +194,7 @@
             "description": "{{REF:links.templateEmbed}} helps give developers a starting point for new Discord bots, so that much of the initial setup can be avoided and developers can instead focus on meaningful bot features."
         },
         "chatCommands": {
+            "add": "add",
             "help": "help",
             "info": "info",
             "test": "test"
@@ -204,6 +209,7 @@
             "option": "option"
         },
         "commandDescs": {
+            "add": "Add a movie to the end of the list.",
             "help": "Get help with commands, permissions, FAQ, etc.",
             "info": "View bot info.",
             "test": "Run the test command."
@@ -272,6 +278,10 @@
         "yesNo": {
             "yes": "Yes",
             "no": "No"
+        },
+        "boolean": {
+            "true": "True",
+            "false": "False"
         },
         "other": {
             "na": "N/A"
