@@ -35,6 +35,11 @@
         "pm2:delete": "pm2 delete process.json"
     },
     "nodemonConfig": {
+        "verbose": true,
+        "watch": [
+            "src/*"
+        ],
+        "ext": "js, ts, mjs, json",
         "ignore": [
             "dist/*"
         ]
@@ -69,6 +74,7 @@
         "eslint": "^8.29.0",
         "eslint-plugin-import": "^2.26.0",
         "eslint-plugin-unicorn": "^45.0.1",
+        "nodemon": "^2.0.20",
         "prettier": "^2.8.0",
         "typescript": "^4.9.3"
     }
