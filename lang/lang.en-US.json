@@ -19,7 +19,7 @@
                 "title": "{{COM:bot.name}} - Commands",
                 "description": [
                     "{{CMD_LINK_TEST}} - {{REF:commandDescs.test}}",
-                    "{{CMD_LINK_TEST}} - {{REF:commandDescs.add}}",
+                    "{{CMD_LINK_ADD}} - {{REF:commandDescs.add}}",
                     "{{CMD_LINK_INFO}} - {{REF:commandDescs.info}}"
                 ],
                 "fields": [
