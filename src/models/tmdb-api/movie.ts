@@ -1,5 +1,5 @@
-/** 
- * The base interface representing a Movie.
+/**
+ * The base class representing a Movie.
  */
 export class Movie {
     id: number;

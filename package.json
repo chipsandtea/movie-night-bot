@@ -26,7 +26,7 @@
         "commands:rename": "npm run build && node --enable-source-maps dist/start-bot.js commands rename",
         "commands:delete": "npm run build && node --enable-source-maps dist/start-bot.js commands delete",
         "commands:clear": "npm run build && node --enable-source-maps dist/start-bot.js commands clear",
-        "start": "npm run start:bot",
+        "start": "npm run start:bot || exit 1",
         "start:bot": "npm run build && node --enable-source-maps dist/start-bot.js",
         "start:manager": "npm run build && node --enable-source-maps dist/start-manager.js",
         "start:pm2": "npm run build && npm run pm2:start",
