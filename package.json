@@ -34,6 +34,11 @@
         "pm2:stop": "pm2 stop process.json",
         "pm2:delete": "pm2 delete process.json"
     },
+    "nodemonConfig": {
+        "ignore": [
+            "dist/*"
+        ]
+    },
     "dependencies": {
         "@discordjs/rest": "1.4.0",
         "class-transformer": "0.5.1",
