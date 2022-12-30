@@ -66,6 +66,7 @@ export class AddCommand implements Command {
     const resp = await body.json();
     const transformed = plainToClass(SearchResult<MovieDetails>, resp);
     const movieDetails = this.getMovieDetails(transformed);
+    console.log(movieDetails);
 
     if (movieDetails != null) {
       await InteractionUtils.send(
@@ -73,7 +74,7 @@ export class AddCommand implements Command {
         Lang.getEmbed('displayEmbeds.add', data.lang, this.getEmbedVars(username, movieDetails))
       );
     } else {
-      await InteractionUtils.send(intr, 'Unable to find movie :(');
+      await InteractionUtils.send(submitted, 'Unable to find the movie :(');
     }
   }
 
@@ -113,6 +114,10 @@ export class AddCommand implements Command {
     return `https://image.tmdb.org/t/p/original${posterPath}`;
   }
 
+  private generateTMDBUrl(tmdbId: number): string {
+    return `https://www.themoviedb.org/movie/${tmdbId}`;
+  }
+
   /**
    * Tries to return the MovieDetails of the movie the user requested. If the search term yielded multiple movies, return the most popular movie (assuming that the most popular title was the one intended).
    * @param response The search response from TMDB search movies endpoint.
@@ -141,6 +146,7 @@ export class AddCommand implements Command {
       ADD_MOVIE_YEAR: movieDetails.release_date,
       ADD_MOVIE_DESC: movieDetails.overview,
       ADD_MOVIE_POSTER_PATH: this.generateMovieImageUrl(movieDetails.poster_path),
+      TMDB_URL: this.generateTMDBUrl(movieDetails.id),
     };
   }
 }

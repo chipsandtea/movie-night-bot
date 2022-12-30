@@ -57,7 +57,13 @@
       "add": {
         "title": "{{ADD_USER_NAME}} added {{ADD_MOVIE_NAME}} ({{ADD_MOVIE_YEAR}})",
         "description": "{{ADD_MOVIE_DESC}}",
-        "image": "{{ADD_MOVIE_POSTER_PATH}}"
+        "image": "{{ADD_MOVIE_POSTER_PATH}}",
+        "fields": [
+            {
+                "name": "{{REF:fields.links}}",
+                "value": ["[View on TMDB]({{TMDB_URL}})"]
+            }
+        ]
       },
       "test": {
         "description": "Test command works!"
