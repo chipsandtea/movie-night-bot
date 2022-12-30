@@ -58,6 +58,12 @@ export const ChatCommandMetadata: {
         description_localizations: Lang.getRefLocalizationMap('commandDescs.add'),
         dm_permission: true,
         default_member_permissions: undefined,
+        options: [
+            {
+                ...Args.ADD_QUERY,
+                required: true,
+            },
+        ],
     },
 };
 

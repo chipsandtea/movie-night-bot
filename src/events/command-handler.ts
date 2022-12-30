@@ -105,23 +105,25 @@ export class CommandHandler implements EventHandler {
             return;
         }
 
-        // Defer interaction
+        // Defer interaction always. Modal work needs to be done before this.
         // NOTE: Anything after this point we should be responding to the interaction
-        switch (command.deferType) {
-            case CommandDeferType.PUBLIC: {
-                await InteractionUtils.deferReply(intr, false);
-                break;
-            }
-            case CommandDeferType.HIDDEN: {
-                await InteractionUtils.deferReply(intr, true);
-                break;
-            }
-        }
 
-        // Return if defer was unsuccessful
-        if (command.deferType !== CommandDeferType.NONE && !intr.deferred) {
-            return;
-        }
+        // Don't defer command interactions immediately since several commands require modal interaction.
+        // switch (command.deferType) {
+        //     case CommandDeferType.PUBLIC: {
+        //         await InteractionUtils.deferReply(intr, false);
+        //         break;
+        //     }
+        //     case CommandDeferType.HIDDEN: {
+        //         await InteractionUtils.deferReply(intr, true);
+        //         break;
+        //     }
+        // }
+
+        // // Return if defer was unsuccessful
+        // if (command.deferType !== CommandDeferType.NONE && !intr.deferred) {
+        //     return;
+        // }
 
         // Get data from database
         let data = await this.eventDataService.create({

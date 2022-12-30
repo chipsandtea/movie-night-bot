@@ -5,6 +5,12 @@ import { Language } from '../models/enum-helpers/index.js';
 import { Lang } from '../services/index.js';
 
 export class Args {
+    public static readonly ADD_QUERY: APIApplicationCommandBasicOption = {
+        name: 'Add query',
+        description: 'Type the name of the movie',
+        type: ApplicationCommandOptionType.String,
+        max_length: 300,
+    };
     public static readonly HELP_OPTION: APIApplicationCommandBasicOption = {
         name: Lang.getRef('arguments.option', Language.Default),
         name_localizations: Lang.getRefLocalizationMap('arguments.option'),
